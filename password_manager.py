@@ -1,6 +1,11 @@
 import getpass
 import hashlib
 import json
+import pyfiglet
+
+def display_banner():
+    banner = pyfiglet.figlet_format("Password Manager")
+    print(banner)
 
 # A dictionary to store passwords
 passwords = {}
@@ -58,6 +63,7 @@ def restore_passwords():
 
 # Main loop
 while True:
+    display_banner()
     print("\nOptions:")
     print("1. Create a new password entry")
     print("2. Retrieve a password")
